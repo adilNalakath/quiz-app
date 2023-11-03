@@ -32,7 +32,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
             height: 160,
             width: 280,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(18),
-            color: Color.fromARGB(255, 251, 220, 200)),
+            color: Color.fromARGB(255, 249, 102, 4)),
             child: Center(child: Text(questions[index].question!,textAlign:TextAlign.center,style: TextStyle(
               fontSize: 18,fontWeight: FontWeight.bold)),),
            ),
