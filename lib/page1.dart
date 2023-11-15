@@ -1,16 +1,19 @@
 // ignore: unused_import
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_4/category.dart';
+import 'package:flutter_application_4/category2.dart';
+import 'package:flutter_application_4/category3.dart';
 import 'package:flutter_application_4/qustionpage.dart';
 
-class page1 extends StatefulWidget {
-  const page1({super.key});
+class Page1 extends StatefulWidget {
+  const Page1({super.key});
 
   @override
-  State<page1> createState() => _page1State();
+  State<Page1> createState() => _Page1State();
 }
 
-class _page1State extends State<page1> {
+class _Page1State extends State<Page1> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -36,9 +39,9 @@ class _page1State extends State<page1> {
             fontWeight: FontWeight.bold,)),
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Row(
+              child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SizedBox(width: 29.0,),
+                 
                   InkWell(onTap: () {
                     Navigator.push(context,
                     MaterialPageRoute(builder: (context)=> ScreenTwo()),);
@@ -60,61 +63,74 @@ class _page1State extends State<page1> {
                               ),)],
                             ),
                         ),
-                  ),SizedBox(width: 89.0,),
-                    Container(
-                                height: 100,
-                                width: 100,
-                                decoration: BoxDecoration(shape: BoxShape.rectangle,
-                                color: Color.fromARGB(248, 7, 7, 7),
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(60.0),
-                                  topRight: Radius.circular(60.0),
-                                ),),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [Center(child: Image.asset('assets/images/sports png.png',
-                                    ),)],
-                                  ),
-                              ),],
+                  ),
+                    InkWell(onTap: () {
+                      Navigator.push(context,
+                      MaterialPageRoute(builder: (context)=>Sports()),);
+                    },
+                      child: Container(
+                                  height: 100,
+                                  width: 100,
+                                  decoration: BoxDecoration(shape: BoxShape.rectangle,
+                                  color: Color.fromARGB(248, 7, 7, 7),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(60.0),
+                                    topRight: Radius.circular(60.0),
+                                  ),),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [Center(child: Image.asset('assets/images/sports png.png',
+                                      ),)],
+                                    ),
+                                ),
+                    ),],
                  
               ),
             ),
-            SizedBox(height: 20,),
+            
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Row(
+              child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SizedBox(width: 29.0,),
-                  Container(
-                        height: 100,
-                        width: 100,
-                        decoration: BoxDecoration(shape: BoxShape.rectangle,
-                        color: Color.fromARGB(248, 7, 7, 7),
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(60.0),
-                          topRight: Radius.circular(60.0),
-                        ),),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [Center(child: Image.asset('assets/images/history image.png',
-                            ),)],
-                          ),
-                      ),SizedBox(width: 89.0,),
-                    Container(
-                                height: 100,
-                                width: 100,
-                                decoration: BoxDecoration(shape: BoxShape.rectangle,
-                                color: Color.fromARGB(248, 7, 7, 7),
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(60.0),
-                                  topRight: Radius.circular(60.0),
-                                ),),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [Center(child: Image.asset('assets/images/tec image.png',
-                                    ),)],
-                                  ),
-                              ),],
+                  
+                  InkWell(onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>History()),);  
+                  },
+                    child: Container(
+                          height: 100,
+                          width: 100,
+                          decoration: BoxDecoration(shape: BoxShape.rectangle,
+                          color: Color.fromARGB(248, 7, 7, 7),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(60.0),
+                            topRight: Radius.circular(60.0),
+                          ),),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [Center(child: Image.asset('assets/images/history image.png',
+                              ),)],
+                            ),
+                        ),
+                  ),
+                    InkWell(onTap: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Tech()),); 
+                    },
+                      child: Container(
+                                  height: 100,
+                                  width: 100,
+                                  decoration: BoxDecoration(shape: BoxShape.rectangle,
+                                  color: Color.fromARGB(248, 7, 7, 7),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(60.0),
+                                    topRight: Radius.circular(60.0),
+                                  ),),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [Center(child: Image.asset('assets/images/tec image.png',
+                                      ),)],
+                                    ),
+                                ),
+                    ),],
                  
               ),
             ),

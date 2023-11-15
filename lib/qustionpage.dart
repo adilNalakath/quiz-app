@@ -14,10 +14,11 @@ class ScreenTwo extends StatefulWidget {
 }
 
 class _ScreenTwoState extends State<ScreenTwo> {
-  
+    
   int index = 0;
   int mark = 0;
-  
+  String indexOfAnswer = ""; // Reset selected answer.
+  bool isCorrect = false;
   @override
   Widget build(BuildContext context) {
     
@@ -30,14 +31,14 @@ class _ScreenTwoState extends State<ScreenTwo> {
              Center(
            child: Container(
             height: 160,
-            width: 280,
+            width: 300,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(18),
-            color: Color.fromARGB(255, 249, 102, 4)),
+            color: Color.fromARGB(255, 6, 6, 5)),
             child: Center(child: Text(questions[index].question!,textAlign:TextAlign.center,style: TextStyle(
-              fontSize: 18,fontWeight: FontWeight.bold)),),
+             color: Color.fromARGB(250, 245, 250, 244), fontSize: 18,fontWeight: FontWeight.bold)),),
            ),
              ),   
-                  SizedBox(height: 10),
+                  SizedBox(height: 39),
                     GestureDetector(onTap: () {
                       setState(() {
                        if (questions[index].indexOfAnswer == 0){
@@ -64,15 +65,15 @@ class _ScreenTwoState extends State<ScreenTwo> {
                       });
                     },
                       child: Container(
-                       height: 40,
-                       width: 150,
+                       height: 49,
+                       width: 250,
                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(18),
-                       color:  Color.fromARGB(250, 32, 173, 238)),
+                       color:  Color.fromARGB(249, 69, 75, 78)),
                        child: Center(child: Text(questions[index].options![0],style: TextStyle(
-                         fontSize: 18,fontWeight: FontWeight.bold),),),
+                         color:Color.fromARGB(250, 245, 245, 244) ,fontSize: 15,fontWeight: FontWeight.bold),),),
                          ),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 39),
                   GestureDetector(onTap: () {
                     setState(() {
                       if (questions[index].indexOfAnswer == 1){
@@ -95,13 +96,13 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     });
                   },
                     child: Container(
-                     height: 40,
-                     width: 150,
+                     height: 49,
+                     width: 250,
                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(18),
-                     color: Colors.lightBlueAccent),
+                     color: const Color.fromARGB(255, 74, 76, 78)),
                      child: Column(mainAxisAlignment: MainAxisAlignment.center,
                      children: [Center(child: Text(questions[index].options![1],style: TextStyle(
-                       fontSize: 15,fontWeight: FontWeight.bold
+                     color: Color.fromARGB(250, 244, 245, 246),  fontSize: 15,fontWeight: FontWeight.bold
                      ),
                      ),
                      ),
@@ -109,7 +110,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                      ),
                     ),
                   ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 39),
                   GestureDetector(onTap: () {
                     setState(() {
                       if (questions[index].indexOfAnswer == 2){
@@ -131,13 +132,13 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     });
                   },
                     child: Container(
-                     height: 40,
-                     width: 150,
+                     height: 49,
+                     width: 250,
                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(18),
-                     color: Colors.lightBlueAccent),
+                     color: const Color.fromARGB(255, 82, 86, 87)),
                      child: Column(mainAxisAlignment: MainAxisAlignment.center,
                      children: [Center(child: Text(questions[index].options![2],style: TextStyle(
-                       fontSize: 15,fontWeight: FontWeight.bold
+                       color:Color.fromARGB(250, 244, 250, 245),fontSize: 15,fontWeight: FontWeight.bold
                      ),
                      ),
                      ),
@@ -145,7 +146,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                      ),
                     ),
                   ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 39),
                   GestureDetector(onTap: () {
                     setState(() {
                       if (questions[index].indexOfAnswer == 3){
@@ -167,13 +168,13 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     });
                   },
                     child: Container(
-                     height: 40,
-                     width: 150,
+                     height: 49,
+                     width: 250,
                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(18),
-                     color:  Colors.lightBlueAccent),
+                     color:  const Color.fromARGB(255, 83, 86, 88)),
                      child: Column(mainAxisAlignment: MainAxisAlignment.center,
                      children: [Center(child: Text(questions[index].options![3],style: TextStyle(
-                       fontSize: 15,fontWeight: FontWeight.bold
+                      color: Color.fromARGB(250, 244, 245, 249), fontSize: 15,fontWeight: FontWeight.bold
                      ),
                      ),
                      ),

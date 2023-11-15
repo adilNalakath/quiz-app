@@ -8,7 +8,7 @@ class Scorepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(),
+    appBar: AppBar(title: Text(''),backgroundColor: Color.fromARGB(250, 67, 90, 98),),
      body: Center(
       child:markfrom>=3 ? Column(
        mainAxisAlignment: MainAxisAlignment.center,
@@ -29,8 +29,7 @@ class Scorepage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (BuildContext context) => ScreenTwo(),),);
-        }, child: Text('Back to Quiz',
-        )
+        }, child: Text('Back to Quiz',)
         ),
        ], 
 
@@ -61,6 +60,7 @@ class Scorepage extends StatelessWidget {
 
       )
     ), 
+    
     );
     
   }
